@@ -1,0 +1,27 @@
+.student {
+  padding-left:400px; /* padding => works for div to move the position */
+}
+
+
+.student table th,td{
+  border-collapse: collapse; 
+  border: 1px solid black;
+  width: 200px;
+  font-size: larger;
+  margin-left: 400px; /*margin=> works for table to move the position*/
+  position: relative; 
+}
+
+.student table thead {
+  border: 1px solid black;
+  background-color: rgb(200, 205, 212);
+  color:#111858;
+  text-align: center;
+}
+
+.student table tbody {
+  border: 1px solid black;
+  background-color: rgb(223, 224, 226);
+  color: black;
+  text-align: center;
+}
