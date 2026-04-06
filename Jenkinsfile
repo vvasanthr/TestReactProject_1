@@ -19,7 +19,7 @@ stages{
     }
     stage('run container'){
         steps{
-            docker run --name duper -p 7575:5173 -d superstar
+            docker run --name duper -p 7575:5173 -d super
         }
     }
 }
