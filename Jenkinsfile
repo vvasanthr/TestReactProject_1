@@ -22,8 +22,8 @@ stages{
         sh '''
         aws ecr get-login-password --region eu-north-1 | \
         docker login --username AWS --password-stdin 375209111341.dkr.ecr.eu-north-1.amazonaws.com
-        docker tag super:latest 375209111341.dkr.ecr.eu-north-1.amazonaws.com/super:latest
-        docker push 375209111341.dkr.ecr.eu-north-1.amazonaws.com/super:latest
+        docker tag super:latest 375209111341.dkr.ecr.eu-north-1.amazonaws.com/vvasanthr/testreactproject
+        docker push 375209111341.dkr.ecr.eu-north-1.amazonaws.com/vvasanthr/testreactproject:latest
         '''
     }
 }
