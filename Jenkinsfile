@@ -4,7 +4,7 @@ pipeline{
 stages{
     stage('git clone'){
         steps{
-            git branch:'main', url:'https://github.com/vvasanthr/TestReactProject_11.git'
+            git branch:'main', url:'https://github.com/vvasanthr/TestReactProject_1.git'
         }
     }
     stage('show code'){
