@@ -14,17 +14,17 @@ stages{
     }
     stage('build docker image'){
         steps{
-            docker build -t super .
+            sh 'docker build -t super .'
         }
     }
      stage('delete container'){
         steps{
-            docker rm -f duper
+            sh 'docker rm -f duper'
         }
     }
     stage('run container'){
         steps{
-            docker run --name duper -p 7575:5173 -d super
+            sh 'docker run --name duper -p 7575:5173 -d super'
         }
     }
 }
