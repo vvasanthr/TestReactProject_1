@@ -17,6 +17,11 @@ stages{
             docker build -t super .
         }
     }
+     stage('delete container'){
+        steps{
+            docker rm -f duper
+        }
+    }
     stage('run container'){
         steps{
             docker run --name duper -p 7575:5173 -d super
