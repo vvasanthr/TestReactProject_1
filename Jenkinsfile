@@ -27,11 +27,7 @@ stages{
         '''
     }
 }
-  stage('show code'){
-        steps{
-            echo 'code is ready to run'
-        }
-    }
+
 /*     stage('delete container'){
         steps{
             sh 'docker rm -f duper'
