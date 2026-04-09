@@ -25,10 +25,10 @@ stages{
     stage('Push to ECR') {
     steps {
         sh '''
-        aws ecr get-login-password --region region | \
-        docker login --username AWS --password-stdin account_id.dkr.ecr.region.amazonaws.com
-        docker tag super:latest account_id.dkr.ecr.region.amazonaws.com/repository_name
-        docker push account_id.dkr.ecr.region.amazonaws.com/repository_name:latest
+        aws ecr get-login-password --region $region | \
+        docker login --username AWS --password-stdin $account_id.dkr.ecr.$region.amazonaws.com
+        docker tag super:latest $account_id.dkr.ecr.$region.amazonaws.com/$repository_name
+        docker push $account_id.dkr.ecr.$region.amazonaws.com/$repository_name:latest
         '''
     }
 }
@@ -37,11 +37,13 @@ stages{
         steps{
             sh 'docker rm -f duper'
         }
-  } */
+  } 
+*/
 /*    stage('run container'){
         steps{
             sh 'docker run --name duper -p 7575:5173 -d super'
         }
-    }   */
+    }   
+*/
 }
 }
