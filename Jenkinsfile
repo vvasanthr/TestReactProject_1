@@ -1,6 +1,11 @@
 pipeline{
     agent any
 
+environment{
+        account_id = '375209111341'
+        region = 'eu-north-1'
+        repository_name = 'vvasanthr/testreactproject'
+}
 stages{
     stage('git clone'){
         steps{
@@ -20,10 +25,10 @@ stages{
     stage('Push to ECR') {
     steps {
         sh '''
-        aws ecr get-login-password --region eu-north-1 | \
-        docker login --username AWS --password-stdin 375209111341.dkr.ecr.eu-north-1.amazonaws.com
-        docker tag super:latest 375209111341.dkr.ecr.eu-north-1.amazonaws.com/vvasanthr/testreactproject
-        docker push 375209111341.dkr.ecr.eu-north-1.amazonaws.com/vvasanthr/testreactproject:latest
+        aws ecr get-login-password --region region | \
+        docker login --username AWS --password-stdin account_id.dkr.ecr.region.amazonaws.com
+        docker tag super:latest account_id.dkr.ecr.region.amazonaws.com/repository_name
+        docker push account_id.dkr.ecr.region.amazonaws.com/repository_name:latest
         '''
     }
 }
