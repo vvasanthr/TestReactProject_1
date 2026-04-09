@@ -27,15 +27,15 @@ stages{
         '''
     }
 }
-     stage('delete container'){
+/*     stage('delete container'){
         steps{
             sh 'docker rm -f duper'
         }
-    }
-    stage('run container'){
+  } */
+/*    stage('run container'){
         steps{
             sh 'docker run --name duper -p 7575:5173 -d super'
         }
-    }
+    }   */
 }
 }
