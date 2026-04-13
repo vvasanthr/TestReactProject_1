@@ -92,7 +92,7 @@ pipeline {
             echo 'EC2 Instance Created Successfully!'
         }
         failure {
-            echo 'Pipeline Failed!'
+            echo 'Pipeline Failed!!'
         }
     }
 }
